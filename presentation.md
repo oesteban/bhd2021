@@ -6,7 +6,7 @@ layout: false
 count: false
 
 .middle.center[
-# NiPreps | NeuroImaging PREProcessing toolS
+# BHD2021 | Building the *NiPreps* community
 
 <br />
 <br />
@@ -22,7 +22,7 @@ layout: false
 count: false
 
 .middle.center[
-# NiPreps | NeuroImaging PREProcessing toolS
+# BHD2021 | Building the *NiPreps* community
 
 <br />
 <br />
