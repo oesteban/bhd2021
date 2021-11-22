@@ -87,20 +87,30 @@ layout: true
 ---
 template: sidebar
 
-# Outlook
+## Outlook
 
-### 1. How communities form
+.left-column3[
+.distribute.large[
+- How communities form
 
-### 2. The *fMRIPrep* experience
+- The *fMRIPrep* experience
 
-### 3. From *fMRIPrep* to *NiPreps*
+- From *fMRIPrep* to *NiPreps*
 
-### 4. Governance and GitHub's MVG
+- Governance and GitHub's MVG
 
-### 5. Community tools (on GitHub)
+- Community tools (on GitHub)
 
-### 6. Beyond the defaults
+- Beyond the defaults
+]
+]
 
+.right-column3[
+<p align="center">
+<img src="assets/art-of-community.png" width="100%" />
+</p>
+https://www.jonobacon.com/books/artofcommunity/
+]
 
 ---
 
@@ -115,90 +125,26 @@ template: sidebar
 
 ---
 
-## The research workflow of functional MRI (nowadays)
-<br />
+## Jono Bacon's *Community TODO List*
 
-<div style="margin: 10px 100px 10px 300px">
-<p align="center">
-  <img src="../strother-2020.png" style="width: 100%" />
-</p>
-<p align="right">(source: next slide)</p>
-</div>
+.larger[
+☑ Identify how we can divide our community into teams.
 
----
+☑ Ensure that teams can communicate early and effectively.
 
-## The research workflow of functional MRI (2006)
-<br />
+☑ Attract a diverse range of contributors to our community to get involved and contribute to our goals.
 
-<div style="margin: 10px 100px 10px 300px">
-<p align="center">
-  <img src="../strother-2006.png" style="width: 100%" />
-</p>
-<p align="right">(Strother, 2006; <a href="https://doi.org/10.1109/MEMB.2006.1607667">10.1109/MEMB.2006.1607667</a>)</p>
-</div>
+☑ Build an environment conducive to our wider goals.
 
----
+☑ Define the scope of each team, and help team members understand that scope.
 
-## The research workflow of functional MRI (*a.B.*<sup>\*</sup>)
-<br />
+☑ Understand the extent and range of collaboration between our teams.
 
-<div style="margin: 10px 100px 10px 300px">
-<p align="center">
-  <img src="../strother-2020-scanner.png" style="width: 100%" />
-</p>
-<p align="right">Adapted (<a href="https://doi.org/10.1109/MEMB.2006.1607667">Strother, 2006</a>)</p>
-</div>
+☑ Encourage diversity and opportunity in the community.
 
-<sup>\*</sup>a.B. = *after BIDS* (Brain Imaging Data Structure; [Gorgolewski et al. (2016)](https://doi.org/10.1038/sdata.2016.44))
+☑ Produce a Code of Conduct.
 
----
-
-## Neuroimaging is now mature
-* many excellent tools available (from specialized to foundational)
-  * large toolboxes (AFNI, ANTs/ITK, FreeSurfer, FSL, Nilearn, SPM, etc.)
-  * workflow software (Nipype, Shellscripts, Nextflow, CWL)
-  * container technology, CI/CD
-
-* a wealth of prior knowledge (esp. about humans)
-
-* LOTS of data acquired everyday
-
-## BIDS - A thrust of technology-driven development
-* A **uniform and complete interface** to data:
-
-  * **Uniform**: enables the workflow adapt to the data
-  * **Complete**: enables validation and minimizes human-intervention
-
-* Extensible reproducibility:
-
-  * [BIDS-Derivatives](https://bids-specification.readthedocs.io/en/latest/)
-  * [BIDS-Apps](https://bids-apps.neuroimaging.io/) ([Gorgolewski et al., 2017](https://doi.org/10.1371/journal.pcbi.1005209))
-
-???
-
-* researchers have a large portfolio of image processing components readily available
-* toolboxes with great support and active maintenance:
----
-## New questions changing the focus:
-
-### - **validity** (does the workflow actually work out?)
-### - **transparency** (is it a black-box? how precise is reporting?)
-### - **vibration** (how each tool choice & parameters affect overall?)
-### - **throughput** (how much data/time can it possible take?)
-### - **robustness** (can I use it on diverse studies?)
-### - **evaluation** (what is it unique about the workflow, w.r.t. existing alternatives?)
-
----
-
-## The garden of forking paths
-
-<p align="center">
-<img src="../narps.png" width="800px" alt="NARPS Paper" />
-</p>
-
-([Botvinik-Nezer et al., 2020](https://doi.org/10.1038/s41586-020-2314-9))
-
-Around 50% of teams used *fMRIPrep*'ed inputs.
+]
 
 ---
 
@@ -267,18 +213,20 @@ However, fMRIPrep does allow some flexibility to ensure the preprocessing meets 
 --
 
 .pull-left[
-## Why?
+## Key aspects
 
 * Preprocessing of fMRI was in need for **division of labor**.
 
-* Obsession with **transparency** made early-adopters confident of the recipes they were applying.
+* Obsession with **transparency**.
 
 * **Responsiveness** to feedback.
+
+* **Due credit**
 ]
 
 .pull-right[
 <p align="center">
-<img src="../torw2020/assets/fmriprep-ga-viewers.png" width="400px" />
+<img src="assets/fmriprep.org-pageviews.png" width="400px" />
 </p>
 ]
 
@@ -292,11 +240,100 @@ to fmriprep.org, which is the documentation website.
 
 ---
 
+## Key aspect: division of labor
+
+<div style="margin: 40px 100px 10px 320px">
+<p align="center">
+  <img alt="The MRI-o-scope" src="assets/mri-o-scope-workflow.svg" width="100%" />
+</p>
+</div>
+
+
+---
+
+## Key aspect: transparency
+.pull-left[
+<p align="center">
+<img src="assets/wright-2019.png" width="400px" />
+</p>
+]
+
+.pull-right[
+
+.distribute[
+fMRIPrep generates one participant-wide report after execution.
+
+Reports describe the data as found, and the steps applied
+(providing .blue[visual support to look inside the box]):
+
+  1. show researchers their data;
+
+  2. show how *fMRIPrep* interpreted the data (describing the actual preprocessing steps);
+
+  3. quality control of results, facilitating early error detection.
+]
+]
+
+???
+
+Therefore, reports have become a fundamental feature of fMRIPrep
+because they not only allow assessing the quality of the processing,
+but also provide an insight about the logic supporting such processing.
+
+In other words, reports help respond to the what was done and the why was it done
+in addition to the how well it did.
+
+---
+
+## Key aspect: responsiveness (www.neurostars.org)
+
+https://neurostars.org/tag/fmriprep
+
+<div style="margin: 40px 100px 10px 320px">
+<p align="center">
+  <img alt="The MRI-o-scope" src="assets/neurostars.png" width="100%" />
+</p>
+</div>
+
+---
+
 ## Key aspect: credit all direct contributors
 
-<p align="center">
-<img src="../fmriprep-authors.png" width="700px" alt="fMRIPrep authors" />
-</p>
+```Shell
+oesteban@dendrite:~/workspace/fmriprep$ python .maint/paper_author_list.py 
+```
+
+.small[
+```
+Running '/usr/local/bin/git-line-summary' on repo
+Some people made commits, but are missing in .maint/ files: Theo Schäfer, cprovins, Soichi Hayashi, Zeynep Enkavi, Ilkay Isik, Jarod Roland, Ali Cohen, Jakub Kaczmarzyk, Marc Bue, Marcel Falkiewicz, Matteo Visconti di Oleggio Castello, Michael Joseph, Saren Seeley, Sebastien Naze, The Gitter Badger.
+Authors (53):
+Markiewicz, Christopher J. \ :sup:`1`\ ; Blair, Ross W. \ :sup:`1`\ ; Goncalves, Mathias \ :sup:`1`\ ; Kent, James D. \ :sup:`2`\ ; DuPre, Elizabeth \ :sup:`3`\ ; Salo, Taylor \ :sup:`4`\ ; Ciric, Rastko \ :sup:`1`\ ; Pinsard, Basile \ :sup:`5`\ ; Heinsfeld, Anibal S. \ :sup:`6`\ ; Benson, Noah C. \ :sup:`7`\ ; de la Vega, Alejandro \ :sup:`8`\ ; Feingold, Franklin \ :sup:`1`\ ; Valabregue, Romain \ :sup:`9`\ ; Sneve, Markus H. \ :sup:`10`\ ; Finc, Karolina \ :sup:`11`\ ; Erramuzpe, Asier \ :sup:`12`\ ; Moodie, Craig A. \ :sup:`1`\ ; Mentch, Jeff \ :sup:`13`\ ; Jacoby, Nir \ :sup:`14`\ ; Lurie, Daniel J. \ :sup:`15`\ ; Ye, Zhifang \ :sup:`16`\ ; Frederick, Blaise B. \ :sup:`17, 18`\ ; Ma, Feilong \ :sup:`19`\ ; Tooley, Ursula A. \ :sup:`20`\ ; Liem, Franz \ :sup:`21`\ ; Halchenko, Yaroslav O. \ :sup:`19`\ ; Adebimpe, Azeez \ :sup:`22`\ ; Rivera-Dompenciel, Adriana \ :sup:`2`\ ; Amlien, Inge K. \ :sup:`10`\ ; Wexler, Joseph B. \ :sup:`1`\ ; Waller, Lea \ :sup:`23`\ ; Thompson, William H. \ :sup:`1`\ ; Nitsch, Alexander \ :sup:`24`\ ; Stojić, Hrvoje \ :sup:`25`\ ; Groen, Iris I. A. \ :sup:`26`\ ; Jamison, Keith W. \ :sup:`27`\ ; Sitek, Kevin R. \ :sup:`13`\ ; Urchs, Sebastian \ :sup:`3`\ ; Gomez, Daniel E. P. \ :sup:`28`\ ; Devenyi, Grabriel A. \ :sup:`29`\ ; Naveau, Mikaël \ :sup:`30`\ ; Velasco, Pablo \ :sup:`31`\ ; Bellec, Pierre \ :sup:`5`\ ; Cieslak, Matthew \ :sup:`22`\ ; Ghosh, Satrajit S. \ :sup:`32, 33`\ ; Isik, Ayse Ilkay \ :sup:`34`\ ; Provins, Céline \ :sup:`35`\ ; Satterthwaite, Theodore D. \ :sup:`22`\ ; Schaefer, Theo A.J. \ :sup:`24`\ ; Wright, Jessey \ :sup:`1`\ ; Gorgolewski, Krzysztof J. \ :sup:`1`\ ; Poldrack, Russell A. \ :sup:`1`\ ; Esteban, Oscar \ :sup:`36`\ .
+
+
+Affiliations:
+ 1. Department of Psychology, Stanford University
+ 2. Neuroscience Program, University of Iowa
+ 3. Montreal Neurological Institute, McGill University
+ 4. Department of Psychology, Florida International University
+ 5. SIMEXP Lab, CRIUGM, University of Montréal, Montréal, Canada
+ 6. Child Mind Institute
+ 7. Department of Psychology, New York University
+ 8. University of Texas at Austin
+ 9. CENIR, INSERM U1127, CNRS UMR 7225, UPMC Univ Paris 06 UMR S 1127, Institut du Cerveau et de la Moelle épinière, ICM, F-75013, Paris, France
+10. Center for Lifespan Changes in Brain and Cognition, University of Oslo
+11. Centre for Modern Interdisciplinary Technologies, Nicolaus Copernicus University in Toruń
+12. Computational Neuroimaging Lab, BioCruces Health Research Institute
+13. Speech & Hearing Bioscience & Technology Program, Harvard University
+14. Department of Psychology, Columbia University
+15. Department of Psychology, University of California, Berkeley
+16. State Key Laboratory of Cognitive Neuroscience and Learning, Beijing Normal University
+17. McLean Hospital Brain Imaging Center, MA, USA
+18. Consolidated Department of Psychiatry, Harvard Medical School, MA, USA
+19. Dartmouth College: Hanover, NH, United States
+20. Department of Neuroscience, University of Pennsylvania, PA, USA
+```
+]
 
 --
 
@@ -358,7 +395,7 @@ Therefore, it is better to keep things that way (although some minimal efforts t
 
 <div style="margin: 40px 100px 10px 320px">
 <p align="center">
-  <img alt="The fMRIPrep workflow" src="../fmriprep-workflow-final.svg" width="100%" />
+  <img alt="The fMRIPrep workflow" src="assets/fmriprep-workflow-1.0.svg" width="100%" />
 </p>
 <p align="right">
 (<a href="https://doi.org/10.1038/s41592-018-0235-4">Esteban et al., 2019</a>)
@@ -367,118 +404,14 @@ Therefore, it is better to keep things that way (although some minimal efforts t
 
 ---
 
-## The *dMRIPrep* story
-
-After the success of *fMRIPrep*, Dr. A. Keshavan asked "[*when a dMRIPrep?*](https://neurostars.org/t/dmriprep-an-fmriprep-for-diffusion/2385)"
-
-## NeuroStars.org
-(please note this down)
-
-
----
-
-## The *dMRIPrep* story
-
-After the success of *fMRIPrep*, Dr. A. Keshavan asked "[*when a dMRIPrep?*](https://neurostars.org/t/dmriprep-an-fmriprep-for-diffusion/2385)"
-
+<div style="margin: 40px 100px 10px 320px">
 <p align="center">
-<img src="../veraart-2019.png" width="700px" alt="(Veraart, 2019)" />
+  <img alt="The fMRIPrep workflow" src="assets/fmriprep-workflow-21.0.svg" width="100%" />
 </p>
-[Image Processing: Possible Guidelines for the Standardization & Clinical Applications](https://www.ismrm.org/19/program_files/MIS15.htm)
-
-(Veraart, 2019)
-
----
-
-<div style="margin: 40px 40px 10px 250px">
-<img src="https://raw.githubusercontent.com/nipreps/dmriprep/master/docs/resources/figure1.svg" width="100%" alt="dMRIPrep workflow" />
+<p align="right">
+(today)
+</p>
 </div>
-
-
-### Please join!
-
-Joseph, M.; Pisner, D.; Richie-Halford, A.; Lerma-Usabiaga, G.; Keshavan, A.; Kent, JD.; Veraart, J.; Cieslak, M.; Poldrack, RA.; Rokem, A.; Esteban, O.
-
----
-
-template: newsection
-layout: false
-
-.middle.center[
-## Understanding what preprocessing is with visual reports
-]
-
----
-
-## The individual report
-
-<video controls="controls" width="70%"
-       name="Video Name" src="../fmriprep-report.mov"></video>
-
-???
-
-Let's walk through one example of report.
-Reports have several sections, starting with a summary
-indicating the particularities of this dataset
-and workflow choices made based on the input data.
-
-The anatomical section follows with several visualizations
-to assess the anatomical processing steps mentioned before,
-spatial normalization to template spaces (the flickering
-panel helps assess alignment) and finally surface reconstruction.
-
-Then, all functional runs are concatenated, and all show the same
-structure.
-After an initial summary of this particular run,
-the alignment to the same subject's anatomical image is presented,
-with contours of the white and pial surfaces as cues.
-Next panel shows the brain mask and ROIs utilized by the CompCor
-denoising.
-For each run we then find some visualizations to assess the
-generated confounding signals.
-
-After all functional runs are presented, the About section keeps
-information to aid reproducibility of results, such as the software's
-version, or the exact command line run.
-
-The boilerplate is found next, with a text version shown by default
-and tabs to convert to Markdown and LaTeX.
-
-Reports conclude with a list of encountered errors (if any).
-
----
-
-## Reports are a crucial element to ensure transparency
-.pull-left[
-<p align="center">
-<img src="../wright-2019.png" width="400px" />
-</p>
-]
-
-.pull-right[
-
-.distribute[
-fMRIPrep generates one participant-wide report after execution.
-
-Reports describe the data as found, and the steps applied
-(providing .blue[visual support to look inside the box]):
-
-  1. show researchers their data;
-
-  2. show how *fMRIPrep* interpreted the data (describing the actual preprocessing steps);
-
-  3. quality control of results, facilitating early error detection.
-]
-]
-
-???
-
-Therefore, reports have become a fundamental feature of fMRIPrep
-because they not only allow assessing the quality of the processing,
-but also provide an insight about the logic supporting such processing.
-
-In other words, reports help respond to the what was done and the why was it done
-in addition to the how well it did.
 
 ---
 
@@ -536,27 +469,8 @@ and at the same time safe to consume as is.
 
 ---
 
-template: newsection
-layout: false
-
-.middle.center[
-# Deconstructing *fMRIPrep*
-
-<br />
-
-<img align="center" style="width: 60%" src="../torw2020/assets/deconstructing.png" />
-]
-
-???
-
-For the last two years we've been decomposing the architecture of fMRIPrep, spinning off its constituent parts that are valuable in other applications.
-
-This process of decoupling (to use a proper CS term) has been greatly facilitated by the modular nature of the code since its inception.
-
----
-
 <div align="center" style='margin-top: 1em'>
-<img alt="The NiPreps framework" src="../nipreps-chart.png" width="60%" />
+<img alt="The NiPreps framework" src="https://nipreps.org/assets/nipreps-chart.png" width="60%" />
 </div>
 
 ???
@@ -571,466 +485,6 @@ regimes of responsibility:
 As we can see, the boundaries of these three architectural layers are soft and tools such as TemplateFlow may stand in between.
 
 Only projects enclosed in the brain shape pertain to the NiPreps community. NiPype, NiBabel and BIDS are so deeply embedded as dependencies that NiPreps can't be understood without them.
-
----
-
-<img src="https://raw.githubusercontent.com/bids-standard/bids-specification/master/BIDS_logo/BIDS_logo_black.svg" width="20%" />
-
-* BIDS provides a standard, guaranteeing I/O agreements:
-
-  * Allows workflows to self-adapt to the inputs
-  * Ensures the shareability of the results
-
-* PyBIDS: a Python tool to query BIDS datasets ([Yarkoni et al., 2019](https://doi.org/10.21105/joss.01294)):
-
-  ``` Python
-  >>> from bids import BIDSLayout
-
-  # Point PyBIDS to the dataset's path
-  >>> layout = BIDSLayout("/data/coolproject")
-
-  # List the participant IDs of present subjects
-  >>> layout.get_subjects()
-  ['01', '02', '03', '04', '05']
-
-  # List session identifiers, if present
-  >>> layout.get_sessions()
-  ['01', '02']
-
-  # List functional MRI tasks
-  >>> layout.get_tasks()
-  ['rest', 'nback']
-  ```
-
-???
-
-BIDS is one of the keys to success for fMRIPrep and consequently, a strategic element of NiPreps.
-
-Because the tools so far are written in Python, PyBIDS is a powerful tool to index and query inputs and outputs.
-
-The code snippet illustrates the ease to find out the subject identifiers available in the dataset, sessions, and tasks.
-
----
-
-## BIDS Derivatives
-
-.cut-right[
-``` Shell
-derivatives/
-├── fmriprep/
-│ ├── dataset_description.json
-│ ├── logs
-│ ├── sub-01.html
-│ ├── sub-01/
-│ │ ├── anat/
-│ │ │ ├── sub-01_desc-brain_mask.nii.gz
-│ │ │ ├── sub-01_dseg.nii.gz
-│ │ │ ├── sub-01_label-GM_probseg.nii.gz
-│ │ │ ├── sub-01_label-WM_probseg.nii.gz
-│ │ │ ├── sub-01_label-CSF_probseg.nii.gz
-│ │ │ ├── sub-01_desc-preproc_T1w.nii.gz
-│ │ │ ├── sub-01_space-MNI152_desc-brain_mask.nii.gz
-│ │ │ ├── sub-01_space-MNI152_dseg.nii.gz
-│ │ │ ├── sub-01_space-MNI152_label-GM_probseg.nii.gz
-│ │ │ ├── sub-01_space-MNI152_label-WM_probseg.nii.gz
-│ │ │ ├── sub-01_space-MNI152_label-CSF_probseg.nii.gz
-│ │ │ ├── sub-01_space-MNI152_desc-preproc_T1w.nii.gz
-│ │ │ ├── sub-01_from-MNI152_to-T1w_mode-image_xfm.h5
-│ │ │ ├── sub-01_from-T1w_to-MNI152_mode-image_xfm.h5
-│ │ │ └── sub-01_from-orig_to-T1w_mode-image_xfm.txt
-│ │ ├── figures/
-│ │ └── func/
-│ │   ├── sub-01_task-rhymejudgment_space-MNI152_boldref.nii.gz
-│ │   ├── sub-01_task-rhymejudgment_space-MNI152_desc-preproc_bold.nii.gz
-│ │   ├── sub-01_task-rhymejudgment_space-MNI152_desc-confounds_regressors.nii.gz
-│ │   └── sub-01_task-rhymejudgment_space-MNI152_desc-brain_mask.nii.gz
-```
-]
-
-
-???
-
-All NiPreps must write out BIDS-Derivatives.
-As illustrated in the example, the outputs of fMRIPrep are very similar to the BIDS standard for acquired data.
-
----
-
-## BIDS-Apps
-
-* BIDS-Apps proposes a workflow structure model:
-
-  <img src="../journal.pcbi.1005209.g002.png" width="85%" />
-
-* Use of containers & CI/CD
-
-* Uniform interface:
-  .cut-right[
-  ```Shell
-  fmriprep /data /data/derivatives/fmriprep-20.1.1 participant [+OPTIONS]
-  ```
-  ]
-
-???
-
-All end-user applications in NiPreps must conform to the BIDS-Apps specifications.
-
-The BIDS-Apps paper identified a common pattern in neuroimaging studies, where individual participants (and runs) are processed first individually, and then based on the outcomes, further levels of data aggregation are executed.
-
-For this reason, BIDS-Apps define two major levels of execution: participant and group level.
-
-Finally, the paper also stresses the importance of containerizing applications to ensure long-term preservation of run-to-run repeatability and proposes a common command line interface as described at the bottom:
-
-
-- first the name of the BIDS-Apps (fmriprep, in this case)
-- followed by input and output directories (respectively),
-- to finally indicate the analysis level (always participant, for the case of fmriprep)
-
----
-
-.pull-left[
-<p align="center">
-<img src="../card-nipype.svg" width="100%" />
-</p>
-<br />
-
-``` Python
-from nipype.interfaces.fsl import BET
-brain_extract = BET(
-  in_file="/data/coolproject/sub-01/ses-01/anat/sub-01_ses-01_T1w.nii",
-  out_file="/out/sub-01/ses-01/anat/sub-01_ses-01_desc-brain_T1w.nii"
-)
-brain_extract.run()
-```
-
-Nipype is the gateway to mix-and-match from AFNI, ANTs, Dipy, FreeSurfer, FSL, MRTrix, SPM, etc.
-]
-
-.pull-right[
-<p align="center">
-<img src="https://nipype.readthedocs.io/en/latest/_images/nipype_architecture_overview2.png" width="60%" />
-</p>
-]
-
-
-???
-
-Nipype is the glue stitching together all the underlying neuroimaging toolboxes and provides the execution framework.
-
-The snippet shows how the widely known BET tool from FSL can be executed using NiPype. This is a particular example instance of interfaces - which provide uniform access to the tooling with Python.
-
-Finally, combining these interfaces we generate processing workflows to fulfill higher level processing tasks.
-
----
-
-<img src="../card-nipype.svg" width="39%" />
-<p align="center">
-<img src="https://fmriprep.org/en/stable/_images/workflows-5.png" width="60%" />
-</p>
-
-???
-
-For instance, we may have a look into fMRIPrep's functional processing block.
-
-Nipype helps understand (and opens windows in the black box) generating these graph representation of the workflow.
-
----
-
-<img src="../card-nibabel.svg" width="39%" />
-
-``` Python
-"""Fix the affine of a rodent dataset, imposing 0.2x0.2x0.2 [mm]."""
-import numpy as np
-import nibabel as nb
-
-# Open the file
-img = nb.load("sub-25_MGE_MouseBrain_3D_MGE_150.nii.gz")
-
-# New (correct) affine
-aff = np.diag((-0.2, -0.2, 0.2, 1.0))
-
-# Use nibabel to reorient to canonical
-card = nb.as_closest_canonical(nb.Nifti1Image(
-    img.dataobj,
-    np.diag((-0.2, -0.2, 0.2, 1.0)),
-    None
-))
-
-# Save to disk
-card.to_filename("sub-25_T2star.nii.gz")
-```
-
-???
-
-NiBabel allows Python to easily access neuroimaging data formats such as NIfTI, GIFTI and CIFTI2.
-
-Although this might be a trivial task, the proliferation of neuroimaging software has led to some sort of Wild West of formats, and sometimes interoperation is not ensured.
-
-In the snippet, we can see how we can manipulate the orientation headers of a NIfTI volume, in particular a rodent image with incorrect affine information.
----
-
-.pull-left[
-<p align="center">
-<img src="../card-nitransforms.svg" width="100%" />
-</p>
-<br />
-<br />
-
-Transforms typically are the outcome of image registration methodologies
-
-<br />
-
-The proliferation of software implementations of image registration methodologies has resulted in a spread of data structures and file formats used to preserve and communicate transforms.
-
-([Esteban et al., 2020](https://doi.org/10.1109/ISBI45749.2020.9098466))
-]
-
-.pull-right[
-<p align="center">
-<img src="https://raw.githubusercontent.com/poldracklab/nitransforms/master/docs/_static/figure1-joss.png" width="90%" />
-</p>
-]
-
-
-???
-
-NiTransforms is a super-interesting toy project where we are exercising our finest coding skills.
-It completes NiBabel in the effort of making spatial transforms calculated by neuroimaging software tools interoperable.
-
-When it goes beyond the alpha state, it is expected to be merged into NiBabel.
-
-At the moment, NiTransforms is already integrated in fMRIPrep +20.1
-to concatenate LTA (linear affine transforms) transforms obtained with FreeSurfer,
-ITK transforms obtained with ANTs, and motion parameters estimated with FSL.
-
-Compatibility across formats is hard due to the many arbitrary decisions in establishing the mathematical framework of the transform and the intrinsic confusion of applying a transform.
-
-While intuitively we understand applying a transform as "transforming the moving image so that I can represent it overlaid or fused with the reference image and both should look aligned", in reality, we only transform coordinates from the reference image into the moving image's space (step 1 on the right).
-
-Once we know where the center of every voxel of the reference image falls in the moving image coordinate system, we read in the information (in other words, a value) from the moving image. Because the location will probably be off-grid, we interpolate such a value from the neighboring voxels (step 2).
-
-Finally (step 3) we generate a new image object with the structure of the reference image and the data interpolated from the moving information. This new image object is the moving image "moved" on to the reference image space and thus, both look aligned.
-
----
-
-.pull-left[
-<p align="center">
-<img src="../card-templateflow.svg" width="100%" />
-</p>
-
-
-* The Archive (right) is a repository of templates and atlases
-* The Python Client (bottom) provides easy access (with lazy-loading) to the Archive
-
-``` Python
->>> from templateflow import api as tflow
->>> tflow.get(
-...     'MNI152NLin6Asym',
-...     desc=None,
-...     resolution=1,
-...     suffix='T1w',
-...     extension='nii.gz'
-... )
-PosixPath('/templateflow_home/tpl-MNI152NLin6Asym/tpl-MNI152NLin6Asym_res-01_T1w.nii.gz')
-```
-
-.large[www.templateflow.org]
-]
-
-.pull-right[
-<p align="center">
-<img src="../torw2020/assets/templateflow-archive.png" width="90%" />
-</p>
-]
-
-???
-
-One of the most ancient feature requests received from fMRIPrep early adopters was improving the flexibility of spatial normalization to standard templates other than fMRIPrep's default.
-
-For instance, infant templates.
-
-TemplateFlow offers an Archive of templates where they are stored, maintained and re-distributed;
-
-and a Python client that helps accessing them.
-
-On the right hand side, an screenshot of the TemplateFlow browser shows some of the templates currently available in the repository. The browser can be reached at www.templateflow.org.
-
-
-The tool is based on PyBIDS, and the snippet will surely remind you of it.
-In this case the example shows how to obtain the T1w template corresponding to FSL's MNI space, at the highest resolution.
-
-If the files requested are not in TemplateFlow's cache, they will be pulled down and kept for further utilization.
-
----
-
-## TemplateFlow - Archive
-<p align="center">
-<img src="../torw2020/assets/templateflow-datatypes.png" width="75%" />
-</p>
-.small[(Ciric et al. 2020, in prep)]
-
-???
-
-The Archive allows a rich range of data and metadata to be stored with the template.
-
-Datatypes in the repository cover:
-
-- images containing population-average templates,
-- masks (for instance brain masks),
-- atlases (including parcellations and segmentations)
-- transform files between templates
-
-Metadata can be stored with the usual BIDS options.
-
-Finally, templates allow having multiple cohorts, in a similar encoding to that of multi-session BIDS datasets.
-
-Multiple cohorts are useful, for instance, in infant templates with averages at several gestational ages.
-
-
----
-
-<img src="../card-niworkflows.svg" width="39%" />
-
-<br />
-<br />
-
-NiWorkflows is a miscellaneous mixture of tooling used by downstream *NiPreps*:
-
-???
-
-NiWorkflows is, historically, the first component detached from fMRIPrep.
-
-For that reason, its scope and vision has very fuzzy boundaries as compared to the other tools.
-
-The most relevant utilities incorporated within NiWorkflows are:
-
---
-
-* The reportlet aggregation and individual report generation system
-
-???
-
-First, the individual report system which aggregates the visual elements or the reports (which we call "reportlets") and generates the final HTML document.
-
-Also, most of the engineering behind the generation of these reportlets and their integration within NiPype are part of NiWorkflows
-
---
-
-* Custom extensions to NiPype interfaces
-
-???
-
-Beyond the extension of NiPype to generate a reportlet from any given interface, NiWorkflows is the test bed for many utilities that are then upstreamed to nipype.
-
-Also, special interfaces with a limited scope that should not be included in nipype are maintained here.
-
---
-
-* Workflows useful across applications
-
-???
-
-Finally, NiWorkflows indeed offers workflows that can be used by end-user NiPreps. For instance atlas-based brain extraction of anatomical images, based on ANTs.
-
----
-
-<img src="../card-sdcflows.svg" width="39%" />
-
-<object style="width: 75%;" type="image/svg+xml" data="../torw2020/assets/sub-100068_task-machinegame_run-6_desc-sdc_bold.svg"></object>
-
-???
-
-Echo-planar imaging (EPI) are typically affected by distortions along the phase encoding axis, caused by the perturbation of the magnetic field at tissue interfaces.
-
-Looking at the reportlet, we can see how in the "before" panel, the image is warped.
-
-The distortion is most obvious in the coronal view (middle row) because this image has posterior-anterior phase encoding.
-
-Focusing on the changes between "before" and "after" correction in this coronal view, we can see how the blue contours delineating the corpus callosum fit better the dark shade in the data after correction.
-
----
-
-## Upcoming new utilities
-
-### NiBabies | fMRIPrep-babies
-
-* Mathias Goncalves
-
-### NiRodents | fMRIPrep-rodents
-
-* Eilidh MacNicol
-
-
-???
-
-So, what's coming up next?
-
-NiBabies is some sort of NiWorkflows equivalent for the preprocessing of infant imaging. At the moment, only atlas-based brain extraction using ANTs (and adapted from NiWorkflows) is in active developments.
-
-Next steps include brain tissue segmentation.
-
-Similarly, NiRodents is the NiWorkflows parallel for the prepocessing of rodent preclinical imaging. Again, only atlas-based brain extraction adapted from NiWorkflows is being developed.
-
----
-
-### *NiPreps* is a framework for the development of preprocessing workflows
-
-* Principled design, with BIDS as an strategic component
-* Leveraging existing, widely used software
-* Using NiPype as a foundation
-
-???
-
-To wrap-up, I've presented NiPreps, a framework for developing preprocessing
-workflows inspired by fMRIPrep.
-
-The framework is heavily principle and tags along BIDS as a foundational component
-
-NiPreps should not reinvent any wheel, trying to reuse as much as possible of the widely used and tested existing software.
-
-Nipype serves as a glue components to orchestrate workflows.
-
---
-
-### Why preprocessing?
-
-* We propose to consider preprocessing as part of the image acquisition and reconstruction
-* When setting the boundaries that way, it seems sensible to pursue some standardization in the preprocessing:
-  * Less experimental degrees of freedom for the researcher
-  * Researchers can focus on the analysis
-  * More homogeneous data at the output (e.g., for machine learning)
-* How:
-  * Transparency is key to success: individual reports and documentation (open source is implicit).
-  * Best engineering practices (e.g., containers and CI/CD)
-
-???
-
-But why just preprocessing, with a very strict scope?
-
-We propose to think about preprocessing as part of the image acquisition and reconstruction process (in other words, scanning), rather than part of the analysis workflow.
-
-This decoupling from analysis comes with several upshots:
-
-First, there are less moving parts to play with for researchers in the attempt to fit their methods to the data (instead of fitting data with their methods).
-
-Second, such division of labor allows the researcher to use their time in the analysis.
-
-Finally, two preprocessed datasets from two different studies and scanning sites should be more homogeneous when processed with the same instruments, in comparison to processing them with idiosyncratic, lab-managed, preprocessing workflows.
-
-However, for NiPreps to work we need to make sure the tools are transparent.
-
-Not just with the individual reports and thorough documentation, also because of the community driven development. For instance, the peer-review process that goes around large incremental changes is fundamental to ensure the quality of the tool.
-
-In addition, best engineering practices suggested in the BIDS-Apps paper, along with those we have been including with fMRIPrep, are necessary to ensure the quality of the final product.
-
---
-
-### Challenges
-
-* Testing / Validation!
-
-???
-
-As an open problem, validating the results of the tool remains extremely challenging for the lack in gold standard datasets that can tell us the best possible outcome.
 
 ---
 
