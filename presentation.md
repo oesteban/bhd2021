@@ -14,7 +14,7 @@ count: false
 ### O. Esteban
 #### CHUV | Lausanne University Hospital
 
-###### [www.nipreps.org/assets/bhd2020](https://www.nipreps.org/assets/bhd2020)
+###### [oesteban.github.io/bhd2021](https://oesteban.github.io/bhd2021)
 ]
 
 ---
@@ -30,7 +30,7 @@ count: false
 ### O. Esteban
 #### CHUV | Lausanne University Hospital
 
-###### [www.nipreps.org/assets/bhd2020](https://www.nipreps.org/assets/bhd2020)
+###### [oesteban.github.io/bhd2021](https://oesteban.github.io/bhd2021)
 ]
 
 ???
@@ -43,9 +43,8 @@ layout: true
 class: section-separator
 
 .perma-sidebar[
-## BHD2020
-### (Day 2, 14h CET)
-# *NiPreps*
+## BHD2021
+# *NiPreps* community
 
 <br />
 <br />
@@ -67,9 +66,8 @@ name: sidebar
 layout: true
 
 .perma-sidebar[
-## BHD2020
-### (Day 2, 14h CET)
-# *NiPreps*
+## BHD2021
+# *NiPreps* community
 
 <br />
 <br />
