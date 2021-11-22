@@ -89,17 +89,17 @@ template: sidebar
 
 # Outlook
 
-### 1. Understand what preprocessing is - from fMRI
+### 1. How communities form
 
 ### 2. The *fMRIPrep* experience
 
-### 3. The *dMRIPrep* experience
+### 3. From *fMRIPrep* to *NiPreps*
 
-### 4. Importance of the visual reports
+### 4. Governance and GitHub's MVG
 
-### 5. Introducing *NiPreps*
+### 5. Community tools (on GitHub)
 
-### 6. Open forum: first steps and contributing
+### 6. Beyond the defaults
 
 
 ---
