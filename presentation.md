@@ -595,8 +595,8 @@ Defines organization-wide documents / CODE OF CONDUCT
 
 ## Beyond the defaults
 
-* Lowering entry barriers:
-    * `CONTRIBUTING.md` file
+* Lowering entry barriers (diversity and opportunity):
+    * Definition of contribution / the `CONTRIBUTING.md` file
     * [Issue labels](https://www.nipreps.org/community/CONTRIBUTING/#issue-labels) (e.g., ![Good first issue](https://img.shields.io/github/labels/nipreps/fmriprep/good%20first%20issue))
 
 
@@ -615,6 +615,30 @@ Defines organization-wide documents / CODE OF CONDUCT
   <img alt="welcome bot" src="assets/nipreps-welcomebot.png" width="100%" />
 </p>
 </div>
+
+
+---
+
+## Jono Bacon's *Community TODO List*
+
+.larger[
+☑ Identify how we can divide our community into teams.
+
+☑ Ensure that teams can communicate early and effectively.
+
+☑ Attract a diverse range of contributors to our community to get involved and contribute to our goals.
+
+☑ Build an environment conducive to our wider goals.
+
+☑ Define the scope of each team, and help team members understand that scope.
+
+☑ Understand the extent and range of collaboration between our teams.
+
+☑ Encourage diversity and opportunity in the community.
+
+☑ Produce a Code of Conduct.
+
+]
 
 ---
 
