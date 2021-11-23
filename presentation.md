@@ -300,7 +300,7 @@ https://neurostars.org/tag/fmriprep
 ## Key aspect: credit all direct contributors
 
 ```Shell
-oesteban@dendrite:~/workspace/fmriprep$ python .maint/paper_author_list.py 
+oesteban@dendrite:~/workspace/fmriprep$ python .maint/paper_author_list.py
 ```
 
 .small[
@@ -436,17 +436,22 @@ such as infants.
 ---
 
 ## Augmenting scanners to produce "*analysis-grade*" data
-### (data *directly consumable* by analyses)
 
-<br />
-<br />
+<div style="margin: 40px 100px 10px 320px">
+<p align="center">
+  <img alt="The MRI-o-scope" src="assets/nipreps-workflow.svg" width="100%" />
+</p>
+</div>
+
+--
 
 .pull-left[
-
 ***Analysis-grade* data** is an analogy to the concept of "*sushi-grade (or [sashimi-grade](https://en.wikipedia.org/wiki/Sashimi)) fish*" in that both are:
+]
 
-<br />
+--
 
+.pull-right[
 .large[**minimally preprocessed**,]
 
 and
@@ -454,18 +459,6 @@ and
 .large[**safe to consume** directly.]
 ]
 
-.pull-right[
-<img align="right" style='margin-right: 50px' src="https://1.bp.blogspot.com/-Osh4H4WXka0/WlMJmVgkZTI/AAAAAAAAEMY/GynUzSomJ-EBiyqv2m-maiOyKSM7SOmNACLcBGAs/s400/yellowfin%2Btuna%2Bsteaks%2Bnutrition.jpg" />
-]
-
-???
-
-The goal, therefore, of NiPreps is to extend the scanner
-so that, in a way, they produce data ready for analysis.
-
-We liken these analysis-grade data to sushi-grade fish,
-because in both cases the product is minimally preprocessed
-and at the same time safe to consume as is.
 
 ---
 
@@ -485,6 +478,155 @@ regimes of responsibility:
 As we can see, the boundaries of these three architectural layers are soft and tools such as TemplateFlow may stand in between.
 
 Only projects enclosed in the brain shape pertain to the NiPreps community. NiPype, NiBabel and BIDS are so deeply embedded as dependencies that NiPreps can't be understood without them.
+
+---
+
+## Outlook
+
+.left-column3[
+.distribute.large[
+- How communities form
+
+- The *fMRIPrep* experience
+
+- From *fMRIPrep* to *NiPreps*
+
+- Governance and GitHub's MVG
+
+- Community tools (on GitHub)
+
+- Beyond the defaults
+]
+]
+
+---
+
+## MVG - Minimum Viable Governance
+
+<div style="margin: 40px 100px 10px 320px">
+<a href="https://github.com/github/MVG">github/MVG</a>
+<p align="center">
+  <img alt="GH communities" src="assets/gh-mvg.png" width="100%" />
+</p>
+</div>
+
+---
+
+## [nipreps/GOVERNANCE](https://github.com/nipreps/GOVERNANCE) is a fork of GitHub's MVG
+
+.left-column[
+  <img alt="NiPreps governance" src="assets/nipreps-governance.png" width="100%" />
+]
+
+.right-column[
+* three-tier structure
+    * organization level
+    * project level
+    * sibling project level
+
+* Organization level:
+    * Technical Steering Committee
+    * Shared community documents:
+        * Code of Conduct
+        * Support
+        * Licensing policy
+
+* Project & Siblings
+    * Consensus-based
+    * Crediting system (under `.maint/`)
+]
+
+---
+
+## Governance - establishing transparent communication
+
+<div style="margin: 40px 100px 10px 320px">
+<a href="https://nipy.discourse.group/c/nipreps/9">Nipy Discourse / NiPreps Category</a>
+<p align="center">
+  <img alt="discourse" src="assets/nipreps-discourse.png" width="100%" />
+</p>
+</div>
+
+---
+
+## Special `.github` repo ([nipreps/.github](https://github.com/nipreps/.github))
+
+
+
+<div style="margin: 40px 90px 10px 310px">
+Defines organization-wide documents / CODE OF CONDUCT
+<p align="center">
+  <img alt="GH health repo" src="assets/nipreps-.github.png" width="100%" />
+</p>
+</div>
+
+---
+
+## Community tools
+
+<div style="margin: 40px 100px 10px 320px">
+<a href="https://docs.github.com/en/communities">https://docs.github.com/en/communities</a>
+<p align="center">
+  <img alt="GH communities" src="assets/gh-community.png" width="100%" />
+</p>
+</div>
+
+---
+
+## Outlook
+
+.left-column3[
+.distribute.large[
+- How communities form
+
+- The *fMRIPrep* experience
+
+- From *fMRIPrep* to *NiPreps*
+
+- Governance and GitHub's MVG
+
+- Community tools (on GitHub)
+
+- Beyond the defaults
+]
+]
+
+---
+
+## Beyond the defaults
+
+* Lowering entry barriers:
+    * `CONTRIBUTING.md` file
+    * [Issue labels](https://www.nipreps.org/community/CONTRIBUTING/#issue-labels) (e.g., ![Good first issue](https://img.shields.io/github/labels/nipreps/fmriprep/good%20first%20issue))
+
+
+* Setting clear expectations for contributors:
+    * Automated tests / CI
+    * Level of documentation required
+
+
+* Creating a welcoming environment:
+    * Welcome bot
+    * Other automations (e.g., GitHub Actions)
+    * Crediting system
+
+<div style="margin: 40px 100px 10px 320px">
+<p align="center">
+  <img alt="welcome bot" src="assets/nipreps-welcomebot.png" width="100%" />
+</p>
+</div>
+
+---
+
+# Thanks
+
+.dark[
+![Lea Waller](assets/lwaller.png)
+
+![Eric Earl](assets/ecearl.png)
+
+![Elizabeth DuPre](assets/emdupre.png)
+]
 
 ---
 
